@@ -10,7 +10,10 @@ before_script:
   - composer install --no-interaction --prefer-source
   - composer require satooshi/php-coveralls
 
-script: vendor/bin/phpcs --standard=PSR2 src && vendor/bin/phpunit --coverage-text --coverage-clover build/logs/clover.xml
+script:
+  - vendor/bin/phpcs --standard=PSR2 src && vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
 
 after_script:
   - php vendor/bin/coveralls -v
