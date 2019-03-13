@@ -102,7 +102,14 @@ class Purchase
 
             if (static::exists($data[$name])) {
                 if (static::isTooLong($maxLength, $data[$name])) {
-                    throw new InvalidRequestException(sprintf("Parameter [%s] value is too long (%d), %d characters allowed.", $name, strlen($data[$name]), $maxLength));
+                    throw new InvalidRequestException(
+                        sprintf(
+                            "Parameter [%s] value is too long (%d), %d characters allowed.",
+                            $name,
+                            strlen($data[$name]),
+                            $maxLength
+                        )
+                    );
                 }
 
                 if (static::isInvalid($regexp, $data[$name])) {
