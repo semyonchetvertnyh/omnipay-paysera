@@ -47,7 +47,7 @@ class Purchase
             'lang' => $request->getLanguage(),
             'amount' => $request->getAmountInteger(),
             'currency' => $request->getCurrency(),
-            'test' => $request->getTestMode() ? '1' : '0'
+            'test' => $request->getTestMode() ? '1' : '0',
         ];
     }
 
@@ -67,7 +67,7 @@ class Purchase
             'p_city' => $card->getCity(),
             'p_state' => $card->getState(),
             'p_zip' => $card->getPostcode(),
-            'country' => $card->getCountry()
+            'country' => $card->getCountry(),
         ];
     }
 
@@ -104,7 +104,7 @@ class Purchase
                 if (static::isTooLong($maxLength, $data[$name])) {
                     throw new InvalidRequestException(
                         sprintf(
-                            "Parameter [%s] value is too long (%d), %d characters allowed.",
+                            'Parameter [%s] value is too long (%d), %d characters allowed.',
                             $name,
                             strlen($data[$name]),
                             $maxLength
@@ -150,7 +150,7 @@ class Purchase
             ['p_state', 20, false, ''],
             ['p_zip', 20, false, ''],
             ['p_countrycode', 2, false, '/^[a-z]{2}$/i'],
-            ['test', 1, false, '/^[01]$/']
+            ['test', 1, false, '/^[01]$/'],
         ];
     }
 
