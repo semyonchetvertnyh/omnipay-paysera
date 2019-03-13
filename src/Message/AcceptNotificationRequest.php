@@ -9,7 +9,7 @@ use Omnipay\Common\Exception\InvalidRequestException;
 class AcceptNotificationRequest extends AbstractRequest
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getData()
     {
@@ -21,7 +21,7 @@ class AcceptNotificationRequest extends AbstractRequest
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      *
      * @return \Omnipay\Paysera\Message\AcceptNotificationResponse
      *

@@ -18,7 +18,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getRedirectUrl()
     {
@@ -26,7 +26,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function isSuccessful()
     {
@@ -34,7 +34,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function isRedirect()
     {
@@ -42,7 +42,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getRedirectMethod()
     {
@@ -50,7 +50,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getRedirectData()
     {

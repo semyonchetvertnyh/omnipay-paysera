@@ -2,8 +2,8 @@
 
 namespace Omnipay\Paysera\Tests\Message;
 
-use GuzzleHttp\Psr7\Response;
 use Omnipay\Tests\TestCase;
+use GuzzleHttp\Psr7\Response;
 use Omnipay\Paysera\Common\Encoder;
 use Omnipay\Paysera\Common\Signature;
 use Psr\Http\Message\ResponseInterface;
@@ -173,7 +173,7 @@ class AcceptNotificationRequestTest extends TestCase
     }
 
     /**
-     * Get a mock response for a client by mock file name
+     * Get a mock response for a client by mock file name.
      *
      * @param string $path Relative path to the mock response file
      *
@@ -189,7 +189,7 @@ class AcceptNotificationRequestTest extends TestCase
         $dir = dirname($ref->getFileName());
 
         $data = _parse_message(file_get_contents($dir.'/../Mock/'.$path));
-        if (!preg_match('/^HTTP\/.* [0-9]{3} .*/', $data['start-line'])) {
+        if (! preg_match('/^HTTP\/.* [0-9]{3} .*/', $data['start-line'])) {
             throw new \InvalidArgumentException('Invalid response string');
         }
         $parts = explode(' ', $data['start-line'], 3);

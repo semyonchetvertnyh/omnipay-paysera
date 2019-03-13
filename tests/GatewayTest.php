@@ -3,8 +3,6 @@
 namespace Omnipay\Paysera\Tests;
 
 use Omnipay\Paysera\Gateway;
-use Omnipay\Paysera\Message\AcceptNotificationRequest;
-use Omnipay\Paysera\Message\PurchaseRequest;
 use Omnipay\Tests\GatewayTestCase;
 
 class GatewayTest extends GatewayTestCase
