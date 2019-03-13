@@ -45,7 +45,7 @@ class Signature
      * @param  string  $password
      * @return bool
      */
-    private static function isValidSS1(array $data, $password)
+    protected static function isValidSS1(array $data, $password)
     {
         return static::generate($data['data'], $password) === $data['ss1'];
     }
@@ -57,7 +57,7 @@ class Signature
      * @param  \Omnipay\Common\Http\ClientInterface  $client
      * @return bool
      */
-    private static function isValidSS2(array $data, ClientInterface $client)
+    protected static function isValidSS2(array $data, ClientInterface $client)
     {
         $response = $client->request('GET', self::ENDPOINT);
 
