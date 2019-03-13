@@ -22,6 +22,12 @@ composer require league/omnipay semyonchetvertnyh/omnipay-paysera
 
 For general usage instructions, please see the main [Omnipay](https://github.com/thephpleague/omnipay) repository.
 
+## Requirements
+
+* PHP 7.0+
+* Omnipay v3+
+* ext-openssl
+
 ## Basic Usage
 
 The following gateways are provided by this package:
