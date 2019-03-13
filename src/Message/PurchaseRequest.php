@@ -8,7 +8,7 @@ use Omnipay\Paysera\Common\Signature;
 class PurchaseRequest extends AbstractRequest
 {
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      * @throws \Omnipay\Common\Exception\InvalidRequestException
      */
     public function getData()
@@ -22,7 +22,7 @@ class PurchaseRequest extends AbstractRequest
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function sendData($data)
     {

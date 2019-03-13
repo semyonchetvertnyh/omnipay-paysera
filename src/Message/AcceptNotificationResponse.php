@@ -42,7 +42,7 @@ class AcceptNotificationResponse extends AbstractResponse implements Notificatio
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getTransactionReference()
     {
@@ -50,7 +50,7 @@ class AcceptNotificationResponse extends AbstractResponse implements Notificatio
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getTransactionStatus()
     {
@@ -65,7 +65,7 @@ class AcceptNotificationResponse extends AbstractResponse implements Notificatio
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getMessage()
     {
@@ -83,7 +83,7 @@ class AcceptNotificationResponse extends AbstractResponse implements Notificatio
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function isSuccessful()
     {
@@ -91,7 +91,7 @@ class AcceptNotificationResponse extends AbstractResponse implements Notificatio
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getCode()
     {

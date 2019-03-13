@@ -12,7 +12,7 @@ class Gateway extends AbstractGateway
     const VERSION = '1.6';
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function getName()
     {
@@ -20,7 +20,7 @@ class Gateway extends AbstractGateway
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function getDefaultParameters()
     {
@@ -94,7 +94,7 @@ class Gateway extends AbstractGateway
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function purchase(array $options = [])
     {
@@ -102,7 +102,7 @@ class Gateway extends AbstractGateway
     }
 
     /**
-     * @inheritDoc
+     * {@inheritdoc}
      */
     public function acceptNotification(array $options = [])
     {
