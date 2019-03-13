@@ -100,7 +100,7 @@ class Purchase
                 throw new InvalidRequestException("Parameter [{$name}] is required but missing.");
             }
 
-            if (static::exists($data[$name])) {
+            if (static::exists($data, $name)) {
                 if (static::isTooLong($maxLength, $data[$name])) {
                     throw new InvalidRequestException(
                         sprintf(
@@ -170,12 +170,13 @@ class Purchase
     /**
      * Determine the parameter exists.
      *
+     * @param  array  $data
      * @param  string  $name
      * @return bool
      */
-    protected static function exists($name)
+    protected static function exists($data, $name)
     {
-        return ! empty($name);
+        return ! empty($data[$name]);
     }
 
     /**
