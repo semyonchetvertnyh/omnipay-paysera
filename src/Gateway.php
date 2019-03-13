@@ -3,6 +3,8 @@
 namespace Omnipay\Paysera;
 
 use Omnipay\Common\AbstractGateway;
+use Omnipay\Paysera\Message\PurchaseRequest;
+use Omnipay\Paysera\Message\AcceptNotificationRequest;
 
 class Gateway extends AbstractGateway
 {
@@ -98,7 +100,7 @@ class Gateway extends AbstractGateway
      */
     public function purchase(array $options = [])
     {
-        return $this->createRequest('\Omnipay\Paysera\Message\PurchaseRequest', $options);
+        return $this->createRequest(PurchaseRequest::class, $options);
     }
 
     /**
@@ -106,6 +108,6 @@ class Gateway extends AbstractGateway
      */
     public function acceptNotification(array $options = [])
     {
-        return $this->createRequest('\Omnipay\Paysera\Message\AcceptNotificationRequest', $options);
+        return $this->createRequest(AcceptNotificationRequest::class, $options);
     }
 }
