@@ -42,7 +42,7 @@ For general usage instructions, please see the main [Omnipay](https://github.com
 use Omnipay\Omnipay;
 
 // Setup payment gateway
-$gateway = Omnipay::create('Paysersa');
+$gateway = Omnipay::create('Paysera');
 $gateway->setProjectId('123456');
 $gateway->setPassword('abcde12345');
 
@@ -67,7 +67,7 @@ $response = $gateway->purchase(
     [
         'language' => 'ENG',
         'transactionId' => $orderId,
-        // 'paymentMethod' => 10,
+        'paymentMethod' => 'hanzaee',
         'amount' => '10.00',
         'currency' => 'EUR',
         'returnUrl' => "https://example.com/paysera/return/{$orderId}",
@@ -88,7 +88,7 @@ You should also implement method for `notifyUrl`. After successful charging, Pay
 use Omnipay\Omnipay;
 
 // Setup payment gateway
-$gateway = Omnipay::create('Paysersa');
+$gateway = Omnipay::create('Paysera');
 $gateway->setProjectId('123456');
 $gateway->setPassword('abcde12345');
 
